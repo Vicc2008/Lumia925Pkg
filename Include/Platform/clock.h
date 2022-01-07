@@ -29,11 +29,7 @@
 #ifndef __PLATFORM_MSM8960_CLOCK_H
 #define __PLATFORM_MSM8960_CLOCK_H
 
-#include <Chipset/clock.h>
-#include <Chipset/clock_lib2.h>
-
 #define MSM_MMSS_CLK_CTL_SIZE 4096
-#define UART_DM_CLK_RX_TX_BIT_RATE 0xFF
 
 #define REG(off)        (MSM_CLK_CTL_BASE + (off))
 #define REG_MM(off)     (MSM_MMSS_CLK_CTL_BASE + (off))
@@ -338,12 +334,5 @@ struct pll_rate {
 #define DSI_NS_VAL            0xFA000003
 #define DSI_MD_VAL            0x000003FB
 #define DSI_CC_VAL            0x00000080
-
-void config_mmss_clk(uint32_t ns,
-             uint32_t md,
-             uint32_t cc,
-             uint32_t ns_addr, uint32_t md_addr, uint32_t cc_addr);
-void config_mdp_lut_clk(void);
-void mdp_clock_init(void);
 
 #endif

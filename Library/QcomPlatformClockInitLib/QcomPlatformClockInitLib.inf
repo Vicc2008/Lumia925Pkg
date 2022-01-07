@@ -16,7 +16,7 @@
   Lumia925Pkg/Lumia925Pkg.dec
 
 [BuildOptions.ARM]
-  GCC:*_*_*_CC_FLAGS = -Wno-overflow
+  GCC:*_*_*_CC_FLAGS = -Wno-overflow -Wno-unused-variable -Werror -Wno-incompatible-pointer-types
 
 [LibraryClasses]
   IoLib
